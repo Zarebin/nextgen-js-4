@@ -1,0 +1,117 @@
+$firstcolor: rgb(20, 114, 238);
+$secondcolor: rgb(189, 221, 218);
+$textColor:black;
+$font:25px;
+$fontWeight:bold;
+
+@mixin rotate($params...) {
+   transform: rotate($params); 
+}
+*,::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background:pink;
+    justify-content: center;
+    align-items: center;
+}
+.main-box{
+    position: relative;
+    h3{
+        position: absolute;
+        top: 130%;
+        left: 50%;
+        width: auto;
+        transform: translateX(-50%);
+        border: 2px solid black;
+        background: white;
+        padding: 10px;
+        font-size: $font;
+        font-weight: $fontWeight;
+    }
+}
+.mainbox{
+    top: 100px;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius:50%;
+	border:10px solid white;
+	position: relative;
+    transition: 5s;
+    overflow: hidden;
+    .box{
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        clip-path: polygon(100% 0 , 50% 100% , 0 0 );
+        text-align:center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        left: 25%;
+        top: 0;
+        transform-origin:bottom;
+        font-size: $font;
+        font-weight: $fontWeight;
+    }
+    .box:nth-child(even){
+        background-color: $firstcolor;
+    }
+    .box:nth-child(odd){
+        background-color: $secondcolor;
+    }
+    .box2{
+        @include rotate(45deg);
+    }
+    .box3{
+        @include rotate(90deg);
+    }
+    .box4{
+        @include rotate(135deg);
+    }
+    .box5{
+        @include rotate(180deg); 
+    }
+    .box6{
+        @include rotate(225deg);
+    }
+    .box7{
+        @include rotate(270deg);   
+    }  
+    .box8{
+        @include rotate(315deg);
+    }
+}
+.spin{
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform:translate(-50%,50%) rotate(45deg);
+    border-radius: 10% 50% 50% 50%;
+    background: white;
+    color: black;
+    border: 2px solid black;
+    padding: 5px; 
+    cursor: pointer;
+     &:active  a{
+            font-weight: $fontWeight;
+            font-size: 28px;
+        } 
+        &:active{
+            border: 4px solid black;
+
+        }
+     a{
+        display: block;
+        @include rotate(-45deg);
+        font-size: $font;
+     }
+}
+
