@@ -1,0 +1,130 @@
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \*********************************************************************************************************/
+body {
+  font-family: Helvetica Neue, Noto Naskh Arabic UI, Arial, sans-serif;
+}
+
+div h1 {
+  color: red;
+}
+
+.btn {
+  color: black;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: flex;
+  width: 200px;
+}
+
+.grid-item {
+  margin: 10px;
+  flex: 1;
+  border: 1px solid #f1f3f4;
+  border-radius: 5px;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 30px;
+  height: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.output {
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+#num {
+  display: none;
+}
+
+.equal {
+  background-color: #4285f4;
+  color: white;
+}
+
+.operator {
+  background-color: #dadce0;
+}
+
+#output {
+  display: none;
+}
+
+.out {
+  border: 1px solid #dadce0;
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0px 10px;
+}
+
+.digit {
+  background-color: #f1f3f4;
+}
+
+#history--ul {
+  min-width: 300px;
+  border: 1px solid #dadce0;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 100px;
+}
+
+#history--ul li {
+  margin: 15px;
+  list-style: none;
+}
+
+.my-history--span {
+  color: #4285f4;
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  margin: 0px 5px;
+  padding: 5px;
+}
+
+#calculator {
+  position: relative;
+}
+
+#history {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+}
+
+.equation {
+  float: right;
+  white-space: nowrap;
+  margin-top: 25px;
+}
+
+.out::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#history-icon {
+  cursor: pointer;
+}
+
+.notHistory {
+  display: none;
+}
+
+.yesHistory {
+  display: block;
+}
+
+.Answer {
+  margin-top: 50px;
+  font-size: 20px;
+}
