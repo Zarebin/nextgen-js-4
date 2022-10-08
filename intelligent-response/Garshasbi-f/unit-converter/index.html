@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="./dist/styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="measure">
+            <form style="width:100%;">
+                <span>
+                    <select class="select-property form-control" name="the_menu">
+                    </select>
+                </span>
+            </form>
+        </div> 
+        <div class="unit">
+            <div class="converter-side-a">
+                <converter-input unit="0" name="left" listenTo="right" id="left"></converter-input>
+            </div>
+    
+            <div class="converter-equals">
+                <p>=</p>
+            </div>
+    
+            <div class="onverter-side-b">
+                <converter-input unit="0" name="right"  listenTo="left" id="right"></converter-input>
+            </div>
+        </div> 
+    </div>
+   
+	<script src="./dist/bundle.js"></script>
+
+</body>
+</html>
