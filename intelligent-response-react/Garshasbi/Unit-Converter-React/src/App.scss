@@ -1,0 +1,48 @@
+@mixin centerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -48%);
+  width: 600px;
+  height: 150px;
+  border: 2px solid grey;
+  border-radius: 12px;
+  padding: 45px;
+
+  .measure {
+    @include centerText;
+    margin-bottom: 4px;
+
+    form {
+      width: 100%;
+    }
+  }
+
+  .unit {
+    @include centerText;
+
+    .converter-equals {
+      font-size: 33px;
+      padding: 13px;
+    }
+  }
+}
+
+.css-1s2u09g-control {
+  border: 1px solid rgba(128, 128, 128, 0.5803921569) !important;
+  border-radius: 0px !important;
+}
