@@ -1,0 +1,110 @@
+*, ::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background: pink;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box {
+  position: relative;
+}
+.main-box h3 {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  width: auto;
+  transform: translateX(-50%);
+  border: 2px solid black;
+  background: white;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.mainbox {
+  top: 100px;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 10px solid white;
+  position: relative;
+  transition: 5s;
+  overflow: hidden;
+}
+.mainbox .box {
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 25%;
+  top: 0;
+  transform-origin: bottom;
+  font-size: 25px;
+  font-weight: bold;
+}
+.mainbox .box:nth-child(even) {
+  background-color: rgb(20, 114, 238);
+}
+.mainbox .box:nth-child(odd) {
+  background-color: rgb(189, 221, 218);
+}
+.mainbox .box2 {
+  transform: rotate(45deg);
+}
+.mainbox .box3 {
+  transform: rotate(90deg);
+}
+.mainbox .box4 {
+  transform: rotate(135deg);
+}
+.mainbox .box5 {
+  transform: rotate(180deg);
+}
+.mainbox .box6 {
+  transform: rotate(225deg);
+}
+.mainbox .box7 {
+  transform: rotate(270deg);
+}
+.mainbox .box8 {
+  transform: rotate(315deg);
+}
+
+.spin {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, 50%) rotate(45deg);
+  border-radius: 10% 50% 50% 50%;
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+.spin:active a {
+  font-weight: bold;
+  font-size: 28px;
+}
+.spin:active {
+  border: 4px solid black;
+}
+.spin a {
+  display: block;
+  transform: rotate(-45deg);
+  font-size: 25px;
+}
